@@ -1,0 +1,26 @@
+{
+  "name": "trc-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "npm run build && node node_modules/trc.runplugin/index.js build/public"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.0.0",
+    "trc.runplugin": "^1.0.0",
+    "tsify": "^1.0.7",
+    "typescript": "^2.0.3",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "@types/jquery": "^2.0.32",
+    "trclib": "^1.0.8"
+  }
+}

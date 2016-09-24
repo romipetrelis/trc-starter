@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/bundle.js"></script>
+<script>
+    // plugin startup shim
+    var _pluginModule = require('pluginmain');
+    
+    // Global reference to the current sheet;
+    var _plugin = null;
+    // Well-known entry point, called by hosting infrastructure
+    function PluginMain(sheetRef, opts) {
+        var container = document.getElementById("some-container");
+        _pluginModule.MyPlugin.BrowserEntry(sheetRef, container, opts, function(plugin) {
+            _plugin = plugin;
+        });
+    }
+</script>
+<script src="https://trcanvasdata.blob.core.windows.net/code2/plugin.js"></script>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TRC Plugin Starter</title>
+</head>
+<body>
+    <div class="container">
+        <div id="some-container"></div>
+    </div>
+</body>
+</html>
